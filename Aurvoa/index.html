@@ -7,12 +7,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="device-width,initial-scale=1.0>
         <meta name="keywords" content="霓光之萃"><!--可以想八個關鍵字-->
-        <link rel="icon" href="LOGO/aurvoaLogo.png" type="0321_交付_康杏生醫_logo_中英_灰">
+        <link rel="icon" href="LOGO/aurvoaLogo.png" type="logo_英_灰">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&amp;family=Source+Sans+Pro:wght@300;400&amp;display=swap">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      justify-content: center;
+      
+      align-items: center;
+      height: 100vh;
+     
+    }
+    .droplet {
+	width: 800px;
+	animation: float 3s ease-in-out infinite;
+    }
 
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+  </style>
+												   
     </head>
     <body>
 
@@ -76,7 +97,7 @@
                         </ul>																		 
                       </li>
 																											  
-                      <li class="rd-nav-item"><a class="rd-nav-link"href="howtouse.html">How to use</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="howtouse.html">How to use</a>
                       </li>
 																						
                       <li class="rd-nav-item"><a class="rd-nav-link" href="testimonia.html">Testimonia</a>
@@ -102,18 +123,31 @@
       </header>
 																														   
       <!-- Intro-->
-       <img src="PIC/homepic.png" alt="" width="2106" height="856" loading="lazy"/>
+																														   
+<div class="container1">
+  <!-- 水滴 -->
+  <img src="waterdrop.png" alt="水滴動畫" width="800" class="droplet" />
+
+  <!-- LOGO 疊在水滴中心 -->
+  <div class="logo-wrapper">
+    <img src="LOGO/logo_te.png" alt="Logo" width="800" class="logo" />
+  </div>
+</div>
+
+
     
       <!-- WHO WE ARE-->
-      <section class="section section-lg bg-default">
+													   
+  <div class="footer-inner">													   
+											
         <div class="container text-center text-md-start">
           <h5>Born from personal experience, AUROVA was created to offer skincare
 that truly lets your skin breathe.&nbsp;
           </h5>
           <h4><span class="d-inline-block" style="max-width: 1020px">從親身經歷出發，創造讓肌膚真正喘息的保養， 霓光之萃，就這樣誕生了。</span></h4>        
         </div>
-																	
-      </section>
+		    </div>															
+    
 																																				 
       <!-- Images-->
 																	
@@ -139,7 +173,7 @@ that truly lets your skin breathe.&nbsp;
         <h4><span class="d-inline-block" style="max-width: 1020px">真正的保養，是與肌膚建立平衡的關係， 從微代謝開始，喚醒妳天生的光彩。<br>
             <br>
           </span></h4>        
-        </div>																										   
+      </div>																										   
      <img src="PIC/feature.png" alt="" width="2043" height="830" loading="lazy"/>
 	  <div class="container text-center text-md-start">
         <h5>&nbsp;</h5>
@@ -224,5 +258,7 @@ that truly lets your skin breathe.&nbsp;
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
 
+	
+														
     </body>
     </html>
