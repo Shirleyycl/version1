@@ -13,6 +13,10 @@
 		document.querySelector("head").appendChild(script);
 	}
 
+let animationState = 'paused';
+
+
+
 	let
 			initialDate = new Date(),
 
@@ -1684,3 +1688,23 @@
 		}
 	});
 }());
+
+
+   document.querySelectorAll('.card').forEach(card => {
+    const img = card.querySelector('img');
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const moveX = (x - rect.width / 2) / 20;
+      const moveY = (y - rect.height / 2) / 20;
+
+      img.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      img.style.transform = 'scale(1)';
+    });
+  });
