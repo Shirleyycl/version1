@@ -1708,3 +1708,35 @@ let animationState = 'paused';
       img.style.transform = 'scale(1)';
     });
   });
+
+ const slider = document.querySelector('.slider-container');
+
+  let isDown = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+
+  slider.addEventListener('pointerdown', (e) => {
+    isDown = true;
+    slider.classList.add('is-dragging');
+    startX = e.clientX;
+    startScrollLeft = slider.scrollLeft;
+    slider.setPointerCapture?.(e.pointerId);
+  });
+
+  slider.addEventListener('pointermove', (e) => {
+    if (!isDown) return;
+    e.preventDefault(); // 讓拖曳更順
+    const delta = e.clientX - startX;
+    slider.scrollLeft = startScrollLeft - delta;
+  });
+
+  function endDrag(e) {
+    if (!isDown) return;
+    isDown = false;
+    slider.classList.remove('is-dragging');
+    slider.releasePointerCapture?.(e.pointerId);
+  }
+
+  slider.addEventListener('pointerup', endDrag);
+  slider.addEventListener('pointercancel', endDrag);
+  slider.addEventListener('pointerleave', endDrag);
